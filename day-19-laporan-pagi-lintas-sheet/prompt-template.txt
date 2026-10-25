@@ -1,0 +1,17 @@
+Susun laporan pagi untuk tanggal [TANGGAL_LAPORAN] dari tiga sumber data berikut.
+
+=== pesanan.csv ===
+[DATA_PESANAN]
+
+=== stok.csv ===
+[DATA_STOK]
+
+=== kas.csv ===
+[DATA_KAS]
+
+Aturan:
+1. Tulis tepat 5 baris ringkasan: total pesanan, total omzet, produk terlaris, stok di bawah [BATAS_STOK] unit, dan selisih kas vs omzet.
+2. Setiap angka wajib diberi sumber [nama_file:baris].
+3. Tambahkan bagian 'Perlu Dicek Manual' untuk data yang kosong, ganjil, atau tidak cocok antar-sheet.
+4. Tutup dengan 1 saran tindakan paling penting untuk hari ini.
+5. Jangan menambahkan data yang tidak ada di sumber.

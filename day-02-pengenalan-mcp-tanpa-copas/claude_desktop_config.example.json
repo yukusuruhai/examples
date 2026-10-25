@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ruang-kerja-lokal": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/username/dokumen-kerja"
+      ]
+    }
+  }
+}

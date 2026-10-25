@@ -1,0 +1,16 @@
+Bantu aku menyusun rekomendasi restock minggu ini.
+
+DATA PENJUALAN (CSV, 4 minggu terakhir):
+[DATA_PENJUALAN]
+
+WAKTU TUNGGU SUPPLIER: [LEAD_TIME_HARI] hari
+BATAS MODAL BELANJA MINGGU INI: [BATAS_MODAL]
+
+Langkah yang aku minta:
+1. Untuk setiap SKU, hitung rata-rata terjual per minggu dan sebutkan baris sumbernya.
+2. Hitung perkiraan stok habis dalam berapa hari: stok_akhir ÷ (rata-rata mingguan ÷ 7).
+3. Beri label: MENIPIS (habis sebelum barang dari supplier tiba), AMAN, atau LAMBAT (stok cukup lebih dari 4 minggu).
+4. Usulkan jumlah restock untuk yang MENIPIS supaya cukup untuk 2 minggu plus waktu tunggu, dan jangan melebihi batas modal.
+5. Tulis 3 angka yang paling penting aku cek ulang ke sheet asli.
+
+Format jawaban: tabel (SKU | Nama | Rata-rata/minggu | Hari sampai habis | Label | Usulan restock | Baris sumber), lalu daftar 'Perlu Dicek Manual' dan 'DATA KURANG' jika ada.

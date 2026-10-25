@@ -1,0 +1,9 @@
+Berikut adalah data tabel dari spreadsheet kerja kita:
+"""
+[DATA_TABEL_SHEET]
+"""
+
+Tolong buatkan ringkasan laporan dengan aturan ketat:
+1. Setiap angka WAJIB diikuti rujukan baris/kolom aslinya dalam tanda kurung siku, contoh: Rp 12.500.000 [Baris 4, Kolom Omzet].
+2. Jika ada pertanyaan yang angkanya tidak tersedia di tabel, tulis dengan jujur: [BELUM ADA DI TABEL — JANGAN DITEBAK].
+3. Buat 1 baris log ringkas di akhir dalam format: TANGGAL | TOPIK | SEL_RUJUKAN | STATUS_VERIFIKASI.

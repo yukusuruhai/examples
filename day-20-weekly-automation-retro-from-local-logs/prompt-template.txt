@@ -1,0 +1,16 @@
+Aku ingin melakukan retro mingguan untuk alur otomasi [NAMA_ALUR].
+
+Ringkasan log minggu ini (hasil perintah lokal):
+[RINGKASAN_LOG]
+
+Catatan pribadiku tentang minggu ini:
+[CATATAN_PRIBADI]
+
+Waktu yang aku punya untuk perbaikan minggu depan: [WAKTU_TERSEDIA]
+
+Tolong susun retro dengan format berikut:
+1. Gambaran Jujur: total panggilan, jumlah gagal, dan persentase gagal (hitung hanya dari data di atas).
+2. Pola Error: kelompokkan error dari yang paling sering, lengkap dengan dugaan penyebab (tandai jelas mana fakta dan mana dugaan).
+3. Yang Sudah Berjalan Baik: minimal satu hal yang layak dipertahankan.
+4. Satu Perbaikan Prioritas: satu langkah konkret yang muat dalam [WAKTU_TERSEDIA], beserta cara mengecek bahwa perbaikannya berhasil di log minggu depan.
+5. Cerita untuk Komunitas: draf 3 kalimat yang bisa aku bagikan ke grup belajar, berisi angka, pola, dan perbaikan yang aku pilih.

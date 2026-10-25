@@ -1,0 +1,12 @@
+Aku bekerja sebagai [PERAN]. Minggu ini kapasitas efektifku sekitar [KAPASITAS_JAM] jam untuk pekerjaan fokus.
+
+Berikut sisa tugas dari minggu lalu (satu baris per tugas):
+[DAFTAR_TUGAS]
+
+Tolong lakukan ini:
+1. Kelompokkan setiap tugas ke dalam salah satu kategori: LANJUT (penting & harus aku sendiri), DELEGASI (bisa dikerjakan orang lain), atau LEPAS (sudah tidak relevan / dampaknya kecil). Beri alasan 1 kalimat per tugas.
+2. Beri estimasi kasar jam untuk tugas di kategori LANJUT.
+3. Usulkan maksimal 3 KANDIDAT prioritas yang muat dalam kapasitasku, beserta alasannya.
+4. Tulis 1 pertanyaan klarifikasi jika ada tugas yang ambigu.
+
+Format output sebagai tabel dengan kolom: Tugas | Kategori | Alasan | Estimasi Jam, supaya bisa langsung aku tempel ke Sheet. Ingat: keputusan akhir tetap di aku.

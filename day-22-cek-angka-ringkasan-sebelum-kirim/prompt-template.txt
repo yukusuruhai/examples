@@ -1,0 +1,20 @@
+Aku punya data sumber dan ringkasan buatan AI yang akan aku kirim ke [PENERIMA]. Tolong periksa setiap angka dalam ringkasan.
+
+DATA SUMBER (beserta nama sheet dan kolom):
+[DATA_SUMBER]
+
+RINGKASAN AI YANG AKAN DIKIRIM:
+[RINGKASAN_AI]
+
+Buat hasil dalam 3 bagian:
+
+1. TABEL VERIFIKASI
+| No | Angka di Ringkasan | Alamat Sel / Baris Sumber | Rumus (jika hitungan) | Status: COCOK / BERBEDA / TIDAK DITEMUKAN |
+
+2. CATATAN RISIKO
+Sebutkan maksimal 3 angka paling berisiko jika ditanya [PENERIMA], beserta alasannya dalam 1 kalimat.
+
+3. RINGKASAN AMAN KIRIM
+Tulis ulang ringkasan hanya dengan angka berstatus COCOK, sertakan alamat sel dalam kurung di setiap angka. Untuk angka yang dibuang, tulis '(dihapus: sumber belum jelas)'.
+
+Jangan menambah angka baru yang tidak ada di data sumber.

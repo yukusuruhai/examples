@@ -1,0 +1,12 @@
+Bantu aku mencatat jejak kerja AI untuk tugas berikut.
+
+Tanggal: [TANGGAL]
+Tugas: [TUGAS]
+Apa yang dikerjakan AI: [PERAN_AI]
+Apa yang aku kerjakan/ubah sendiri: [SUNTINGAN_MANUSIA]
+Tempat hasil ini dibagikan: [KANAL_PUBLIKASI]
+
+Hasilkan tiga bagian:
+1. LOG: tepat satu baris dengan format `TANGGAL | TUGAS | AI: ... | Manusia: ...` (maksimal 160 karakter).
+2. LABEL: satu kalimat keterbukaan yang jujur dan hangat untuk [KANAL_PUBLIKASI] (maksimal 120 karakter).
+3. CEK: daftar maksimal 3 hal yang sebaiknya aku verifikasi ulang sebelum dibagikan, berdasarkan peran AI di atas.

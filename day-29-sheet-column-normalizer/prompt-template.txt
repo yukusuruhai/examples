@@ -1,0 +1,15 @@
+Berikut isi satu kolom dari spreadsheet-ku. Kolom ini berisi: [JENIS_DATA].
+
+Aturan penamaan baku yang aku mau: [ATURAN_PENAMAAN]
+
+Data (satu nilai per baris):
+[DATA_KOLOM]
+
+Buatkan tabel padanan dalam format CSV dengan kolom:
+nilai_asli,nama_baku,status,alasan
+
+- status diisi YAKIN atau PERLU_CEK
+- alasan diisi singkat, maksimal 10 kata, wajib untuk PERLU_CEK
+- setiap nilai asli yang unik muncul tepat satu kali
+
+Di baris paling akhir, tambahkan ringkasan: jumlah nilai asli unik, jumlah nama baku, jumlah PERLU_CEK.

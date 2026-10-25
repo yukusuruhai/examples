@@ -1,0 +1,14 @@
+Baca file stok [FILE_STOK] dan file penjualan [FILE_PENJUALAN] dari folder yang sudah terhubung.
+
+Tugas:
+1. Hitung rata-rata penjualan harian per barang selama [PERIODE_HARI] hari terakhir.
+2. Hitung perkiraan hari sampai stok habis (stok saat ini ÷ rata-rata harian).
+3. Tandai barang yang perkiraan habisnya kurang dari [LEAD_TIME_HARI] hari sebagai PRIORITAS PESAN.
+4. Tandai barang yang tidak terjual sama sekali di periode tersebut sebagai STOK LAMBAT.
+
+Format jawaban:
+- Tabel: Nama Barang | Stok | Rata-rata/Hari | Perkiraan Habis (hari) | Status | Sumber (file:baris)
+- Ringkasan 3 kalimat untuk pemilik toko.
+- Daftar data yang hilang atau janggal (kalau ada).
+
+Jangan menebak angka yang tidak ada di file.

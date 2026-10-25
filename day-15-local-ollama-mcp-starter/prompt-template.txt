@@ -1,0 +1,9 @@
+Tolong baca dan susun ringkasan terstruktur dari berkas kerja lokal berikut:
+"""
+[ISI_BERKAS_LOKAL]
+"""
+
+Format keluaran wajib:
+1. Ringkasan Inti (maksimal 3 poin beserta kutipan baris/angka asli).
+2. Daftar Tindak Lanjut (Action Items) yang jelas.
+3. Peringatan jika ada data yang belum lengkap (jangan menebak angka).

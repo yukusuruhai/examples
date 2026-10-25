@@ -1,0 +1,16 @@
+Aku sedang membangun MCP server lokal (TypeScript, @modelcontextprotocol/sdk, zod, vitest).
+
+Sumber data: [SUMBER_DATA]
+Kolom/struktur data: [STRUKTUR_DATA]
+Pertanyaan yang perlu dijawab agen: [KEBUTUHAN_AGEN]
+Direktori data yang diizinkan: [DIREKTORI_DATA]
+
+Tolong buatkan:
+1. Daftar tool minimal (read-only) beserta alasan singkat kenapa tiap tool dibutuhkan.
+2. Schema zod untuk input setiap tool: pakai enum, batas angka (min/max), dan panjang string. Dilarang memakai any.
+3. Fungsi guard path yang menolak traversal (../), symlink keluar folder, dan ekstensi di luar whitelist.
+4. Kerangka handler tool yang mengembalikan data terbatas (dengan limit) dan pesan error yang jelas.
+5. Minimal 6 kasus tes vitest: 3 input valid, 3 input jahat (path traversal, limit berlebih, nama sheet tidak dikenal).
+6. Perintah verifikasi lokal (vitest + MCP Inspector) dan checklist singkat sebelum server dipakai agen.
+
+Pisahkan tiap bagian dengan heading dan code block. Jaga setiap file tetap kecil dan punya satu tanggung jawab.

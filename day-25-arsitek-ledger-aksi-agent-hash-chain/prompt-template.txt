@@ -1,0 +1,17 @@
+Aku ingin memasang ledger aksi berantai hash untuk agent AI-ku.
+
+Stack agent: [AGENT_STACK]
+Bahasa untuk kode: [BAHASA_KODE]
+Titik pemanggilan tool saat ini (tempel potongan kode): 
+[POTONGAN_KODE_TOOL]
+Data yang tidak boleh tercatat mentah: [DATA_SENSITIF]
+
+Tolong hasilkan:
+1. Skema satu baris ledger (field, tipe, contoh), termasuk seq, timestamp ISO, tool, argumen ringkas, hasil ringkas, prev, hash.
+2. Aturan kanonikalisasi JSON supaya hash konsisten (urutan key, encoding).
+3. Fungsi pembungkus yang mencatat setiap pemanggilan tool secara append-only, beserta penyamaran data sensitif.
+4. Skrip verifikasi CLI yang membaca ledger dari baris pertama dan melaporkan seq pertama yang rantainya putus, dengan exit code non-zero jika gagal.
+5. Tiga unit test: rantai utuh, satu baris diubah, satu baris dihapus.
+6. Daftar batasan jujur dan cara menyimpan anchor hash terakhir.
+
+Jaga setiap file di bawah 300 baris dan pisahkan tanggung jawab (penulis ledger, verifikator, penyamar data).

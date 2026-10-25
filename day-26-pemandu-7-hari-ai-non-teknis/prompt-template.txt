@@ -1,0 +1,8 @@
+Aku bekerja sebagai [PEKERJAAN]. Tugas yang paling menguras tenagaku setiap minggu adalah: [TUGAS_MELELAHKAN]. Alat yang aku punya saat ini: [ALAT_TERSEDIA]. Waktu luang untuk belajar per hari: [WAKTU_HARIAN].
+
+Tolong bantu aku dengan langkah berikut:
+1. Klasifikasikan sensitivitas data dalam tugas ini (SENSITIF / UMUM) beserta alasan singkat, lalu rekomendasikan jalurnya: model lokal di laptop atau layanan AI gratis.
+2. Pecah tugas ini menjadi 7 latihan harian kecil (Hari 1 sampai Hari 7) yang makin meningkat, masing-masing selesai dalam [WAKTU_HARIAN].
+3. Untuk setiap hari, tuliskan satu prompt latihan siap salin dalam bahasa Indonesia.
+4. Buatkan header tabel sheet untuk log belajar dengan kolom: Hari | Tugas | Prompt Dipakai | Jalur (Lokal/Cloud) | Hasil Singkat | Menit Dihemat | Perlu Koreksi? (Ya/Tidak) | Catatan.
+5. Tutup dengan 3 tanda jujur bahwa AI BELUM cocok untuk tugas ini, supaya aku tahu kapan harus tetap mengerjakannya secara manual.

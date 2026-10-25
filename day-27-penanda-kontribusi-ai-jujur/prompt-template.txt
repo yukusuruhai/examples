@@ -1,0 +1,15 @@
+Aku baru menyelesaikan pekerjaan berikut dan ingin mencatat kontribusi AI secara jujur.
+
+Jenis pekerjaan: [JENIS_PEKERJAAN]
+Tanggal: [TANGGAL]
+
+Catatan proses kerjaku (apa yang aku minta ke AI, apa yang aku ubah, apa yang aku cek):
+[CATATAN_PROSES]
+
+Audiens yang akan membaca hasilnya: [AUDIENS]
+
+Tolong buatkan:
+1. Satu baris CSV dengan format: tanggal,pekerjaan,bagian_ai,bagian_aku,status_verifikasi
+2. Tabel singkat 2 kolom: 'Dikerjakan AI' dan 'Diputuskan/Dicek Manusia'
+3. Satu kalimat pengungkapan (maksimal 25 kata) yang cocok untuk audiens di atas, jujur, tidak defensif, dan tidak berlebihan
+4. Daftar bagian yang 'BELUM JELAS' beserta satu pertanyaan klarifikasi, jika ada

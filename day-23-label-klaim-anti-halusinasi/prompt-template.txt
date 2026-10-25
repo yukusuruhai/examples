@@ -1,0 +1,19 @@
+Aku butuh jawaban yang bisa aku pertanggungjawabkan.
+
+PERTANYAAN:
+[PERTANYAAN]
+
+SUMBER (satu-satunya rujukan yang boleh dipakai):
+"""
+[SUMBER_DATA]
+"""
+
+Konteks penggunaan: [KONTEKS_PENGGUNAAN]
+
+Tolong kerjakan dengan format ini:
+1. JAWABAN SINGKAT (maksimal 5 kalimat).
+2. TABEL KLAIM dengan kolom: No | Klaim | Label ([ADA DI SUMBER]/[DUGAAN]/[TIDAK TAHU]) | Kutipan persis dari sumber atau alasan.
+3. 3 KLAIM PALING BERISIKO: urutkan klaim yang paling merugikan kalau ternyata salah (angka, nama, tanggal, kewajiban hukum), beserta kata kunci yang bisa aku cari dengan Ctrl+F di dokumen asli.
+4. CELAH INFORMASI: sebutkan apa yang tidak bisa dijawab dari sumber ini dan sumber tambahan apa yang perlu aku cari.
+
+Kalau sumber tidak cukup untuk menjawab, katakan dengan jujur. Itu jauh lebih membantu daripada jawaban yang terdengar yakin.
