@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YukSuruhAI — Contoh, Template Prompt & Skrip Otomasi Praktis 🌱</title>
+  <meta name="description" content="Katalog publik template prompt, Google Apps Script, dan skrip otomasi praktis YukSuruhAI. Anti-hype, teruji, dan siap pakai.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Header Banner -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🌱</span>
+        <div>
+          <a href="#" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-1.5 hover:text-emerald-600 transition">
+            YukSuruhAI <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-full">Templates Hub</span>
+          </a>
+          <p class="text-xs text-slate-500">Satu Tema, Tiga Lensa: Praktis, Anti-Hype, & Teruji</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <a href="https://t.me/+mYEesFREPu8zOTg9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg transition shadow-sm">
+          <span>💬</span> Telegram Komunitas
+        </a>
+        <a href="https://github.com/yukusuruhai/examples" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-lg transition border border-slate-300">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-4 pt-8 pb-4">
+    <div class="bg-gradient-to-r from-emerald-900 to-slate-900 rounded-2xl p-6 md:p-8 text-white shadow-md relative overflow-hidden">
+      <div class="relative z-10 max-w-2xl">
+        <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold text-xs tracking-wider uppercase mb-3">
+          Katalog Terbuka & Bebas Lisensi (MIT)
+        </span>
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
+          Ambil Skrip, Template Prompt & SOP Otomasi
+        </h1>
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+          Semua template yang kami bagikan di Instagram & Threads dirangkum rapi di sini. Cukup 1 ketukan untuk menyalin prompt atau unduh skrip Python/Apps Script untuk tokomu.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 text-xs text-emerald-200">
+          <span class="flex items-center gap-1">✓ Biaya Rp0</span>
+          <span class="flex items-center gap-1">✓ Anti-Halusinasi</span>
+          <span class="flex items-center gap-1">✓ Langsung Eksekusi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Section -->
+  <section class="max-w-5xl mx-auto px-4 py-4 w-full">
+    <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+      <!-- Track Tabs -->
+      <div class="flex flex-wrap gap-1.5 p-1 bg-slate-200/70 rounded-xl text-xs font-semibold" id="trackFilters">
+        <button onclick="setFilter('all')" class="tab-btn active px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition" data-track="all">Semua Template</button>
+        <button onclick="setFilter('track-1')" class="tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition" data-track="track-1">Track 1: Awam</button>
+        <button onclick="setFilter('track-2')" class="tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition" data-track="track-2">Track 2: Bisnis/UMKM</button>
+        <button onclick="setFilter('track-3')" class="tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition" data-track="track-3">Track 3: Engineer</button>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative min-w-[260px]">
+        <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Cari topik, hari, atau skrip..." class="w-full pl-9 pr-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Grid -->
+  <main class="max-w-5xl mx-auto px-4 py-4 flex-1 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="cardsGrid">
+
+      <!-- Day 1 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-1 track-2" data-keywords="kamus prompt notulen meeting pdf lead magnet hari 1 day 1">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-700 rounded-md">Hari 1 • Awam & Bisnis</span>
+            <span class="text-xs text-slate-400">15 Prompts</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Kamus 15 Prompt Sakti Anti-Pusing</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Kompilasi prompt harian untuk merapikan notulensi rapat, intisari laporan PDF panjang, time blocking, hingga draf SOP dari voice note.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono relative group">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d1">Bertindaklah sebagai sekretaris eksekutif profesional. Berikut adalah coretan kasar dan rekaman suara dari rapat internal tim kami:
+[TEMPELKAN CATATAN KASAR DI SINI]
+
+Tolong ubah menjadi notulensi rapi dengan struktur:
+1. Ringkasan Eksekutif (maksimal 3 kalimat).
+2. Keputusan yang Telah Disepakati.
+3. Action Items (Tugas, PIC, Deadline).</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d1', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Prompt</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-01-kamus-prompt-anti-pusing" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Lihat 15 Prompt ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-3" data-keywords="mcp model context protocol server 30 baris typescript python cursor claude hari 6 day 6">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-md">Hari 6 • Software Engineer</span>
+            <span class="text-xs text-slate-400">TypeScript / Python</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Bikin MCP Server dalam 30 Baris Kode</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Menghubungkan AI ke database inventori lokal via Model Context Protocol (MCP) terbuka. Siap dipasang di Claude Desktop / Cursor.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d6">const server = new Server({ name: "yuksuruhai-tools", version: "1.0.0" });
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [{ name: "cek_stok", description: "Cek stok produk real-time" }]
+}));</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d6', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Kode</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-06-mcp-server-30-baris" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Unduh Skrip (TS/Py) ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-1" data-keywords="notulensi rapat action items pic deadline eksekutif hari 8 day 8">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-700 rounded-md">Hari 8 • Produktivitas</span>
+            <span class="text-xs text-slate-400">Prompt & Python CLI</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Otomasi Notulensi Rapat & Action Items</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Ekstraksi catatan acak dan transkrip audio menjadi matriks penanggung jawab (PIC), batas waktu (deadline), dan parking lot keputusan.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d8">Ubah catatan rapat ini menjadi notulensi terstruktur:
+1. Ringkasan Eksekutif (maks 3 kalimat).
+2. Keputusan yang Disepakati.
+3. Tabel Action Items: [No | Tugas | PIC | Tenggat Waktu].
+4. Parking Lot (hal tertunda).</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d8', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Prompt</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-08-notulensi-rapat" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Lihat Skrip Python ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 9 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-2" data-keywords="nota kwitansi google sheets ocr apps script struk pembukuan hari 9 day 9">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 rounded-md">Hari 9 • Bisnis / UMKM</span>
+            <span class="text-xs text-slate-400">Google Apps Script</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Ubah Foto Struk Jadi Baris Google Sheets</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            AI Vision membaca foto nota belanja kusut, lalu webhook Google Apps Script otomatis menambahkan baris pembukuan ke lembar kas operasional.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d9">Lihat foto struk ini. Ekstraksi data transaksi menjadi JSON murni:
+{
+  "tanggal": "YYYY-MM-DD",
+  "nama_toko": "...",
+  "total_akhir": 0,
+  "metode_bayar": "QRIS/CASH",
+  "daftar_barang": [{"nama": "...", "qty": 1, "harga": 0}]
+}</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d9', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Prompt</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-09-nota-to-sheets" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Ambil Code.gs ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-2" data-keywords="cek stok google sheets bot telegram toko online admin webhook hari 10 day 10">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-amber-50 text-amber-700 rounded-md">Hari 10 • Bisnis / UMKM</span>
+            <span class="text-xs text-slate-400">Telegram Bot + Sheets</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Pangkas 80% Cek Stok: Sheets + Bot Telegram</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Bot Telegram toko membaca stok langsung dari Google Sheets gratisan dalam &lt;1 detik. Stok diperbarui dari HP, bot langsung tahu tanpa server berbayar.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d10">function doGet(e) {
+  var sku = (e.parameter.sku || "").toUpperCase();
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+  // Filter stok berdasarkan SKU dan kembalikan JSON
+}</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d10', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Kode</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-10-telegram-bot-cek-stok" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Ambil Skrip Bot ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 11 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-3" data-keywords="json schema pydantic zod validation constrained decoding engineer hari 11 day 11">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-md">Hari 11 • Software Engineer</span>
+            <span class="text-xs text-slate-400">Pydantic / Zod</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Output JSON Tanpa Patah: Schema Validation</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Mengunci keluaran model LLM ke skema tipe data runtime (Pydantic V2 di Python atau Zod di TypeScript) untuk mencegah token patah dan halusinasi.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d11">class CustomerOrderSchema(BaseModel):
+    customer_name: str = Field(min_length=2)
+    payment_method: Literal["QRIS", "TRANSFER", "COD"]
+    items: List[TransactionItem]
+    is_urgent: bool = False</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d11', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Kode</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-11-json-schema-pydantic-zod" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Unduh Contoh Validasi ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 12 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-3 track-2" data-keywords="ollama model lokal 8b rp0 deepseek qwen privasi data hybrid router hari 12 day 12">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-md">Hari 12 • Engineer & Bisnis</span>
+            <span class="text-xs text-slate-400">Ollama & Python</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Arsitektur Model Lokal 8B Rp0 via Ollama</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Menjalankan model open-weights (DeepSeek-R1 8B / Qwen 2.5 7B) di GPU laptop sendiri untuk data rahasia kantor, dikombinasikan dengan cloud fallback.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d12"># 1. Jalankan Ollama lokal biaya Rp0
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull deepseek-r1:8b
+
+# 2. Endpoint REST siap dipanggil: http://localhost:11434</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d12', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Perintah</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-12-ollama-local-model-rp0" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Ambil Skrip Router ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 13 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-1 track-3" data-keywords="sortir otomatis folder downloads pdf docx invoice faktur pajak python hari 13 day 13">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-700 rounded-md">Hari 13 • Awam & Developer</span>
+            <span class="text-xs text-slate-400">Python Script</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Sortir Otomatis Folder Downloads Berantakan</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Skrip ringan membaca 50 kata pertama isi file (PDF, DOCX, TXT), mendeteksi Faktur Pajak, Invoice, atau Proposal, lalu memindahkannya otomatis ke folder arsip yang rapi.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d13"># Jalankan simulasi aman (Dry-Run):
+python sort_downloads.py
+
+# Pindahkan file secara nyata:
+python sort_downloads.py --apply</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d13', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Perintah</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-13-sortir-folder-downloads" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Unduh Skrip Python ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Day 14 -->
+      <div class="card bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between" data-track="track-1 track-2" data-keywords="persiapan senin 7 template prompt sop spreadsheet bebas lembur hari 14 day 14">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded-md">Hari 14 • Komunitas & SOP</span>
+            <span class="text-xs text-slate-400">7 Prompts & SOP</span>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">Persiapan Kerja Senin: 7 Prompt & SOP</h3>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            Paket Minggu sore bebas lembur: notulensi ber-PIC, sortir kas spreadsheet, draf negosiasi santun, formulasi data, email triage, dan SOP spreadsheet.
+          </p>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mb-3 text-xs text-slate-700 font-mono">
+            <pre class="whitespace-pre-wrap line-clamp-3 text-[11px]" id="prompt-d14">Lakukan triase 10 pesan masuk di inbox saya:
+- Kategori A (Mendesak & Penting): Balas sebelum 11.00 WIB.
+- Kategori B (Penting tapi Tidak Mendesak): Siang hari.
+- Kategori C (Bisa Ditunda): Draf balasan cepat 1 kalimat.</pre>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+          <button onclick="copyToClipboard('prompt-d14', this)" class="inline-flex items-center gap-1 text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg transition">
+            📋 <span>Salin Prompt</span>
+          </button>
+          <a href="https://github.com/yukusuruhai/examples/tree/main/day-14-persiapan-senin-7-prompt-sop" target="_blank" class="text-xs text-slate-600 hover:text-emerald-600 font-medium flex items-center gap-1">
+            Lihat 7 Prompt & SOP ➔
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-12">
+      <span class="text-4xl block mb-2">🔍</span>
+      <h4 class="font-bold text-slate-800 text-base mb-1">Topik Tidak Ditemukan</h4>
+      <p class="text-xs text-slate-500 mb-4">Coba cari kata kunci lain seperti "notulen", "stok", "mcp", atau tanyakan langsung di Telegram.</p>
+      <a href="https://t.me/+mYEesFREPu8zOTg9" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-emerald-600 text-white px-3 py-2 rounded-lg">
+        Tanya Kirana di Telegram ➔
+      </a>
+    </div>
+  </main>
+
+  <!-- Sticky Telegram Call to Action -->
+  <aside class="bg-slate-900 text-white border-t border-slate-800 py-6 mt-12">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h4 class="font-bold text-sm md:text-base text-emerald-400">🌱 Butuh Bantuan Memasang Skrip di Bisnismu?</h4>
+        <p class="text-xs text-slate-300 mt-0.5">Gabung bersama ratusan rekan UMKM dan praktisi di Telegram YukSuruhAI Hub. Gratis & ramah pemula.</p>
+      </div>
+      <a href="https://t.me/+mYEesFREPu8zOTg9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-lg shrink-0">
+        <span>💬</span> Gabung Diskusi Telegram Hub
+      </a>
+    </div>
+  </aside>
+
+  <footer class="bg-slate-950 text-slate-500 text-[11px] py-4 text-center border-t border-slate-900">
+    <p>YukSuruhAI © 2026. Lisensi MIT. Dibangun dengan prinsip Satu Tema, Tiga Lensa.</p>
+  </footer>
+
+  <script>
+    let activeTrack = 'all';
+
+    function setFilter(track) {
+      activeTrack = track;
+      document.querySelectorAll('#trackFilters .tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-track') === track) {
+          btn.className = 'tab-btn active px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition font-semibold';
+        } else {
+          btn.className = 'tab-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition font-semibold';
+        }
+      });
+      applyFilters();
+    }
+
+    function handleSearch() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('#cardsGrid .card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardTrack = card.getAttribute('data-track') || '';
+        const cardKeywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
+        
+        const trackMatches = activeTrack === 'all' || cardTrack.includes(activeTrack);
+        const searchMatches = !query || cardKeywords.includes(query);
+
+        if (trackMatches && searchMatches) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('emptyState').className = visibleCount === 0 ? 'text-center py-12' : 'hidden';
+    }
+
+    function copyToClipboard(elementId, buttonEl) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.innerText || el.textContent;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHtml = buttonEl.innerHTML;
+        buttonEl.innerHTML = '✅ <span>Tersalin!</span>';
+        buttonEl.classList.remove('bg-emerald-50', 'text-emerald-700');
+        buttonEl.classList.add('bg-emerald-600', 'text-white');
+        
+        setTimeout(() => {
+          buttonEl.innerHTML = originalHtml;
+          buttonEl.classList.remove('bg-emerald-600', 'text-white');
+          buttonEl.classList.add('bg-emerald-50', 'text-emerald-700');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+  </script>
+</body>
+</html>
